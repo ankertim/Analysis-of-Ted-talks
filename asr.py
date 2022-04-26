@@ -19,7 +19,7 @@ def asr(file, audio_type, cutPath, cutNum, Trans):
     r = sr.Recognizer()
     a = ""
     for i in range(0, cutNum):
-        with sr.WavFile(AUDIO_FILE + '-' + str(i) + audio_type) as source:    #讀取wav檔
+        with sr.WavFile(AUDIO_FILE + '-' + str(i) + audio_type) as source: #讀取wav檔
             audio = r.record(source)
         try:
             b = r.recognize_google(audio, language="en-US")

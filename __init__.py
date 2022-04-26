@@ -44,7 +44,7 @@ def action():
     video_name = videoDownload(url, obj.video_path)
     if video_name == 1:
         result = """
-            <script type="text/javascript"> 
+            <script type="text/javascript">
                 window.alert('無法抓到網頁');
                 window.history.back(-1);
             </script> 
@@ -53,10 +53,10 @@ def action():
         return result
     elif video_name == 2:
         result = """
-            <script type="text/javascript"> 
+            <script type="text/javascript">
                 window.alert('無法下載影片');
                 window.history.back(-1);
-            </script> 
+            </script>
             """
         video_name = None
         return result
